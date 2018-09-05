@@ -87,6 +87,7 @@ class Playwright
     data.map { |datum| Playwright.new(datum) }
   end
 
+  # why create a new Playwright from an existing playwright's name?
   def self.find_by_name(name)
     playwright = PlayDBConnection.instance.execute(<<-SQL, name)
       SELECT
@@ -96,7 +97,7 @@ class Playwright
       WHERE
         name = ?
       SQL
-    return nil unless person.length > 0 # person is stored in an array!
+    return nil unless playwright.length > 0
 
     Playwright.new(playwright.first)
   end
@@ -118,15 +119,15 @@ class Playwright
     @id = PlayDBConnection.instance.last_insert_row_id
   end
 
-  def update
+  def update#(name: name, birth_year: birth_year)
     raise "#{self} not in database" unless @id
-    PlayDBConnection.instance.execute(<<-SQL, @name, @birth_year, @id)
+    PlayDBConnection.instance.execute(<<-SQL, name, birth_year)
       UPDATE
         playwrights
       SET
-        name = ?, birth_year = ?
+        name = :name, birth_year = :birth_year
       WHERE
-        id = ?
+        id = @id
     SQL
   end
 

@@ -1,4 +1,4 @@
-require 'sqlite3'
+crequire 'sqlite3'
 require 'singleton'
 
 class PlayDBConnection < SQLite3::Database

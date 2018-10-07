@@ -1,0 +1,140 @@
+* {
+    font-family: "Soleil", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.nav-bar {
+  font-size: 15px;
+  list-style-type: none;
+}
+
+.nav-bar li {
+  display: inline;
+}
+
+.nav-link {
+  text-decoration: none;
+  border-right: 1px solid grey;
+  padding-right: 10px;
+  padding-left: 7px;
+  color: black;
+}
+
+.nav-link:hover {
+  color: grey;
+}
+
+.splash {
+  background-image: url("splash.jpg");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.splash-header {
+  display: flex;
+  background-color: ivory;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.splash-logo {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.splash-header div {
+  display: flex;
+  align-items: center;
+}
+
+.user-info li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.user-info a {
+  text-decoration: none;
+  color: black;
+}
+
+.splash-nav-bar {
+  font-size: 15px;
+  list-style-type: none;
+}
+
+.splash-nav-bar li {
+  display: inline;
+}
+
+.splash-nav-link {
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: black;
+}
+
+.splash-nav-link:hover {
+  color: grey;
+}
+
+.splash-footer {
+  position: fixed;
+  bottom: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.splash-footer div {
+  font-family: "Soleil_Medium", Helvetica, Arial, sans-serif;
+  color: ivory;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.splash-footer-two {
+  background-color: ivory;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.splash-footer-two li {
+  display: inline;
+}
+
+.splash-footer-two a {
+  font-size: 20px;
+  font-weight: lighter;
+  text-decoration: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: black;
+}
+
+.splash-footer-two a:hover {
+  color: grey;
+}
